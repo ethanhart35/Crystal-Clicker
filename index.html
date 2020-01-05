@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="assests/css/reset.css"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="assests/css/style.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src=assests/javascript/game.js></script>
+    </head>
+    <body>
+        <div class="container">
+        <h1>CrystalsCollector!</h1>
+
+        <p>You will  be given a random number at the start of the game.
+
+        There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+
+        You win the game by matching your total score to random number, you lose the game if your total score goes above random number.
+
+        The value of each crystal is hidden from you until you click on it.
+
+        Each time when the game starts, the game will change the values of each crystal.
+        </p>
+
+        
+        <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-7">
+                        <h1 id="randomNumber"></h1>
+                    </div>
+                    <div class="col-md-5">
+                        <h3 id="wins">Wins: 0</h3>
+                        <h3 id="losses">Losses: 0</h3>
+                    </div>
+                </div>
+            </div>
+            <img id="blue" class="crystal" src="assests/images/bluecrystal.jpg" alt="bluecrystal">
+            <img id="yellow" class="crystal" src="assests/images/yellowcrystal.jpg" alt="yellowcrystal">
+            <img id="purple" class="crystal" src="assests/images/purplecrystal.jpg" alt="purplecrystal">
+            <img id="red" class="crystal" src="assests/images/redcrystal.jpg" alt="redcrystal">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 id="score">0</h3>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
