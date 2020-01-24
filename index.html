@@ -7,45 +7,47 @@
         <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
         <script src=assests/javascript/game.js></script>
     </head>
+    
     <body>
-        <div class="container">
-        <h1>CrystalsCollector!</h1>
 
-        <p>You will  be given a random number at the start of the game.
 
-        There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
 
-        You win the game by matching your total score to random number, you lose the game if your total score goes above random number.
-
-        The value of each crystal is hidden from you until you click on it.
-
-        Each time when the game starts, the game will change the values of each crystal.
-        </p>
-
-        
+    <div class="container">
         <div class="row">
-                <div class="col-md-12">
-                    <div class="col-md-7">
-                        <h1 id="randomNumber"></h1>
-                    </div>
-                    <div class="col-md-5">
-                        <h3 id="wins">Wins: 0</h3>
-                        <h3 id="losses">Losses: 0</h3>
-                    </div>
-                </div>
-            </div>
-            <img id="blue" class="crystal" src="assests/images/bluecrystal.jpg" alt="bluecrystal">
-            <img id="yellow" class="crystal" src="assests/images/yellowcrystal.jpg" alt="yellowcrystal">
-            <img id="purple" class="crystal" src="assests/images/purplecrystal.jpg" alt="purplecrystal">
-            <img id="red" class="crystal" src="assests/images/redcrystal.jpg" alt="redcrystal">
+            <div class="col-md-12" id="title">
+                <h1>Crystal Collector!</h1>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 id="score">0</h3>
-                </div>
-                <button id="reset">Reset</button>
+                <p>You will  be given a random number at the start of the game.
+                There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                You win the game by matching your total score to random number, you lose the game if your total score goes above random number.
+                The value of each crystal is hidden from you until you click on it.
+                Each time when the game starts, the game will change the values of each crystal.
+                </p>
+            </div>
+            <div class="col-md-12" id="randomNumber">
+            </div>
+            <div class="col-md-12" id="crystals">
+                <img id="blue" class="crystal" src="assests/images/bluecrystal.jpg" alt="bluecrystal">
+                <img id="yellow" class="crystal" src="assests/images/yellowcrystal.jpg" alt="yellowcrystal">
+                <img id="purple" class="crystal" src="assests/images/purplecrystal.jpg" alt="purplecrystal">
+                <img id="red" class="crystal" src="assests/images/redcrystal.jpg" alt="redcrystal">
+            </div>
+            <div class="col-sm-4 WL">
+                <h3 id="wins">Wins: 0</h3>
+            </div>
+            <div class="col-sm-4 WL">
+                <h3 id="score">0</h3>
+            </div>
+            <div class="col-sm-4 WL">
+                <h3 id="losses">Losses: 0</h3>
+            </div>
+            <div class="col-md-12" id="reset">
+                <button type="button" id="resetButton" class="btn btn-outline-warning">Reset</button>
             </div>
         </div>
+    </div>
+
+
 
     </body>
 </html>
