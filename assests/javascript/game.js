@@ -34,26 +34,7 @@ $(document).ready(function () {
     console.log(purple);
     console.log(red);
     //----------------------------------------------------------------------------------------
-
-
-    // $(".crystal").on("click", function(){
-    //     crystal.attr("number", Number);
-    //     crystal = $(this).attr("number");
-    //     score+=crystal;
-    //     $("#score").html(score);
-    // });
-
-
-
-
-
-
-
-
-
-    $("#blue").on("click", function () { //when blue crystal is clicked the function below is run.
-        score += blue; //the value of the blue crystal is added to the score.
-        $("#score").html(score);
+    function checkScore() {
         if (score == target) {
             wins++
             $("#wins").html("Wins:" + wins)
@@ -64,74 +45,36 @@ $(document).ready(function () {
             $("#losses").html("Losses:" + losses)
             generate()
         }
+    }
+
+    $(".crystal").on("click", function () {
+        if ($(this).attr("id") == "blue") {
+            score += blue;
+        }
+        if ($(this).attr("id") == "yellow") {
+            score += yellow;
+        }
+        if ($(this).attr("id") == "purple") {
+            score += purple;
+        }
+        if ($(this).attr("id") == "red") {
+            score += red;
+        }
+        $("#score").html(score);
+        checkScore();
     });
-    $("#yellow").on("click", function () { //when yellow crystal is clicked the function below is run.
-        $("#score").html(score += yellow);
-        if (score == target) {
-            wins++
-            $("#wins").html("Wins:" + wins);
-            generate()
-        }
-        if (score > target) {
-            losses++
-            $("#losses").html("Losses:" + losses);
-            generate()
-        }
+
+    $("#reset").on("click", function () {
+        wins = 0;
+        losses = 0;
+        target = 0;
+        blue = 0;
+        purple = 0;
+        yellow = 0;
+        red = 0;
+        score = 0;
+        $("#wins").html("Wins:" + wins);
+        $("#losses").html("Losses:" + losses);
+        generate();
     });
-    $("#purple").on("click", function () { //when purple crystal is clicked the function below is run.
-        $("#score").html(score += purple);
-        if (score == target) {
-            wins++
-            $("#wins").html("Wins:" + wins);
-            generate()
-        }
-        if (score > target) {
-            losses++
-            $("#losses").html("Losses:" + losses);
-            generate()
-        }
-    });
-    $("#red").on("click", function () { //when red crystal is clicked the function below is run.
-        $("#score").html(score += red);
-        if (score == target) {
-            wins++
-            $("#wins").html("Wins:" + wins);
-            generate()
-        }
-        if (score > target) {
-            losses++
-            $("#losses").html("Losses:" + losses);
-            generate()
-        }
-});
-$("#reset").on("click", function () {
-    wins = 0;
-    losses = 0;
-    target = 0;
-    blue = 0;
-    purple = 0;
-    yellow = 0;
-    red = 0;
-    score = 0;
-    $("#wins").html("Wins:" + wins);
-    $("#losses").html("Losses:" + losses);
-    generate();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
